@@ -31,4 +31,13 @@ o despejando $V_i$
 
 $$ V_i = \frac{1}{2}(V_{i+1} + V_{i-1}) $$
 
-Esta última ecuación nos indica que el valor de la solución en un nodo dependerá de la solución en los nodos vecinos. 
+Esta última ecuación nos indica que el valor de la solución en un nodo dependerá de la solución en los nodos vecinos. Se tratá de una propiedad de la solución de la 
+ecuación de Laplace (o de Poisson): la solución en un punto es un *promedio* de la solución en los puntos vecinos.
+
+## Método de relajación
+
+La conclusión de la sección anterior nos sugiere el siguiente método para encontrar una solución númerica:
+
+1. Definimos una discretización del dominio
+2. Inicializamos cada nodo con un valor de prueba
+3. 
