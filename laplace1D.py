@@ -1,6 +1,6 @@
 # --------------------------------LAPLACE-1D----------------------------------------
-# un script de python que resuelve la ecuación de Laplace ∇^2 V = 0 en dos dimensiones
-# V(x_i,y_j) para (x_i,y_j) ∈ [0,Lx]x[0,Ly] con una discretización x_{i+1} = x_i + h, y_{j+1} = y_j + h
+# un script de python que resuelve la ecuación de Laplace ∇^2 V = 0 en una dimensión
+# V(x_i) para x_i ∈ [0,L] con una discretización x_{i+1} = x_i + h
 # ---------------------------------------------------------------------------------#
 
 # libreria con arreglos y funciones matemáticas
@@ -20,15 +20,13 @@ rc('text.latex', preamble=r'\usepackage[OT1]{fontenc}')
 
 # Condiciones del problema
 # Dominio
-Lx = 1.
-Ly = 1.
+L = 1.
 # Discretización
 # número de nodos N y separación entre puntos h
 N = 100
 h = L / (N-1)
 # arreglo con los valores de las coordenadas de cada nodo
-x = Lx * np.linspace(0,1,N)
-y = Lx * np.linspace(0,1,N)
+x = L * np.linspace(0,1,N)
 # Creación e inicialización de dos arreglos para 
 # el cálculo de potencial V^VIEJO y V^NUEVO
 V_V = np.zeros(N)

@@ -20,24 +20,42 @@ Para resolver la ecuación de Laplace, discretizamos las derivadas aproximandola
 
 $$ \frac{\partial^2 V}{\partial x^2} \sim \frac{V_{i+1} - 2 V_i + V_{i-1}}{\Delta x^2} $$
 
-donde el índice $i$ se refiere al nodo $i$ de la grilla definida por nuestra discretización. En lo que resta de nuestro estudio, consideraremos una discretización uniforme del tipo
+donde el índice $i$ $(i = 0,1,2,...)$ se refiere al nodo $i$ de la grilla definida por nuestra discretización. En lo que resta de nuestro estudio, consideraremos una discretización uniforme del tipo
 $\Delta x = \frac{L}{N-1}$, donde $L$ es el tamaño del dominio, $N$ la cantidad de nodos sobre dicho dominio para el cual calcularemos la solución. $\Delta x$ será entonces
 la separación entre cada nodo consecutivo, tal que $x_{i+1} = x_{i} + \Delta x$.
 Si reemplazamos esta ecuación por diferencias finitas en la ecuación de Laplace para una dimensión obtendremos la ecuación:
 
 $$ \frac{V_{i+1} - 2 V_i + V_{i-1}}{\Delta x^2} = 0 $$ 
 
-o despejando $V_i$
+o despejando $V_i$ (**Ec. 1**)
 
 $$ V_i = \frac{1}{2}(V_{i+1} + V_{i-1}) $$
 
 Esta última ecuación nos indica que el valor de la solución en un nodo dependerá de la solución en los nodos vecinos. Se tratá de una propiedad de la solución de la 
 ecuación de Laplace (o de Poisson): la solución en un punto es un *promedio* de la solución en los puntos vecinos.
 
+## Dos y tres dimensiones
+
+Se puede demostrar que en el caso de un problema bidimensional tendremos (**Ec. 2**)
+
+$$ V_{i,j} = \frac{1}{4}(V_{i,j+1} + V_{i-1,j} + V_{i,j-1} + V_{i+1,j}) $$
+
+y para el caso tridimensional (**Ec. 3**)
+
+$$ V_{i,j,k} = \frac{1}{6}(V_{i,j+1,k} + V_{i-1,j,k} + V_{i,j-1,k} + V_{i+1,j,k} + V_{i,j,k+1} + V_{i,j,k-1}) $$
+
+en donde se ha considerado una discretización uniforme e igual en cada dirección (i.e. $\Delta x = \Delta y = \Delta z = h$). 
+
 ## Método de relajación
 
-La conclusión de la sección anterior nos sugiere el siguiente método para encontrar una solución númerica:
+Seguiremos el siguiente método para encontrar una solución númerica:
 
-1. Definimos una discretización del dominio
-2. Inicializamos cada nodo con un valor de prueba
-3. 
+1. Definimos una discretización del dominio.
+2. Indicamos las condiciones de borde de nuestro problema, dando los valores correspondientes a los nodos de los extremos: $V_0 = V^{\text{BORDE}}, V_{N-1} = V^{\text{BORDE}}$. En este estudio se consideraron condiciones de borde de Dirichlet. 
+3. Inicializamos cada nodo interior con un valor de prueba, usualmente un valor constante.
+4. Calculamos un nuevo valor para cada nodo  $V^{\text{NUEVO}}$, utilizando la ecuación correspondiente (1, 2 o 3).
+5. Una vez que hayamos calculado el nuevo valor de $V$ para cada nodo interno, reemplazamos nuestra suposición inicial $V^{\text{VIEJO}}$ por dicho valor $V^{\text{NUEVO}}$ y repetimos el proceso desde *4*.
+6. Se repiten los pasos *4* y *5* hasta que se haya alcanzado la precisión deseada (por ej. $\vert V^{\text{NUEVO}} - V^{\text{VIEJO}} \vert < \epsilon$) o se hayan realizado un número de iteraciones predeterminado.
+
+Este esquema se conoce como método de Jacobi. Evidentemente se necesitará de dos *arreglos* para el cálculo del potencial. Una solución más eficiente es el método de Gauss-Seidel,
+en el cual se reemplazan los valores $V^{\text{VIEJO}}$ con los $V^{\text{NUEVO}}$, apenas estos son calculados.
