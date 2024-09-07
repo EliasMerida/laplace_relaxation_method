@@ -76,24 +76,28 @@ while (s < e or n <= n_iter):
 print(f"{n} iteraciones realizadas ")
 print(f"La diferencia entre soluciones consecutivas es de O(10^{int(np.log10(s))})")
 
-# Gráfica de la solución
+# Gráfica de la solución en 3D
 X, Y = np.meshgrid(x,y)
 # creo figura
 fig = plt.figure()
 # creo ejes para graficar en 3D
 eje = plt.axes(projection='3d')
 # en los ejes grafico la superficie
-sup = eje.plot_surface(X, Y, V_N, cmap='gist_heat')
+sup = eje.plot_surface(X, Y, V_N, cmap='viridis')
 # a la figura le sumo una barra, indicando en que ejes (ax) en que reduzca el tamaño de la barra (shrink)
 fig.colorbar(sup, ax = eje, shrink = 0.5)
 eje.set_title(r"Potencial bidimensional")
 eje.set_xlabel(r"$x$")
 eje.set_ylabel(r"$y$")
+eje.set_zlabel(r"$V$")
 plt.show()
 
-plt.set_cmap('inferno')   
-plt.contourf(X,Y,V_N)
-plt.colorbar()
+# Gráfica de la solución en 2D
+fig, eje = plt.subplots(figsize=(10, 8))
+cf = eje.contourf(X, Y, V_N, levels=20, cmap='viridis')
+cs = eje.contour(X, Y, V_N, levels=20, colors='white', linewidths=0.5)
+eje.clabel(cs, inline=True, fontsize=8)
+plt.colorbar(cf)
 plt.title(r"Potencial bidimensional")
 plt.xlabel(r"$x$")
 plt.ylabel(r"$y$")
