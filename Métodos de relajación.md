@@ -66,3 +66,7 @@ Se resuelven las ecuaciones para el caso más sencillo
 ![sol_evol][def]
 
 [def]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/1Dsol_evol.gif
+
+<img src="[def2]" alt="drawing" width="200"/>
+
+[def2]: ttps://github.com/EliasMerida/laplace_relaxation_method/blob/main/1Dsol_evol.gi
