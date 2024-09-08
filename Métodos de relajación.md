@@ -94,7 +94,7 @@ iv. $V(x,L) = 5$
 
 [img3]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace2D.png
 
-![laplace2d][img4]
+![laplace2d][img3]
 
 La diferencia entre soluciones consecutivas, para 5000 iteraciones, es de $O(10^{-1})$.
 
