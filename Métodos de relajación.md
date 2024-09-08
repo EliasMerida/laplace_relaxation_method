@@ -1,6 +1,6 @@
 # Resolución de la Ecuación de Laplace mediante el método de relajación
 
-En este resumen se desarrollan las ideas básicas para la implementación del método de relajación para la resolución de la ecuación de Laplace en 2 y 3 dimensiones con condiciones de borde de Dirichlet.
+En este resumen se desarrollan las ideas básicas para la implementación del método de relajación para la resolución de la ecuación de Laplace con condiciones de borde de Dirichlet.
 ## La ecuación de Poisson y la ecuación de Laplace
 
 Para una distribución estática de carga, es posible encontrar el potencial, y por lo tanto el campo eléctrico mediante la resolución de la **ecuación de Poisson**
@@ -61,7 +61,7 @@ Este esquema se conoce como método de Jacobi. Evidentemente se necesitará de d
 en el cual se reemplazan los valores $V^{\text{VIEJO}}$ con los $V^{\text{NUEVO}}$, apenas estos son calculados.
 
 ## Algunos resultados
-Se resuelven las ecuaciones para el caso más sencillo
+Se resuelven las ecuaciones para el caso más sencillo, cada frontera se trata de una 
 
 [img1]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/1Dsol_evol.gif
 

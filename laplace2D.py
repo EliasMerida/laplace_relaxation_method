@@ -13,6 +13,7 @@ from mpl_toolkits import mplot3d
 from copy import deepcopy
 
 # configuración del texto de las gráficas
+# comente si no tiene una distribución de latex instalada
 from matplotlib import rc
 rc('text', usetex=True)
 rc('font', size=12)
@@ -54,7 +55,7 @@ V_V[:,N-1] = 5.
 # número máximo de iteraciones
 n_iter = 5000
 # tolerancia para s = |V^NUEVO - V^VIEJO| < ϵ
-e = 1E-0
+e = 1E-3
 # valores iniciales
 n = 0
 # Ciclo para calcular la solución
@@ -83,29 +84,25 @@ while True:
 print(f"{n} iteraciones realizadas ")
 print(f"La diferencia entre soluciones consecutivas es del orden de O(10^{int(np.log10(s))})")
 
-# # Gráfica de la solución en 3D
-# X, Y = np.meshgrid(x,y)
-# # creo figura
-# fig = plt.figure()
-# # creo ejes para graficar en 3D
-# eje = plt.axes(projection='3d')
-# # en los ejes grafico la superficie
-# sup = eje.plot_surface(X, Y, V_N, cmap='viridis')
-# # a la figura le sumo una barra, indicando en que ejes (ax) en que reduzca el tamaño de la barra (shrink)
-# fig.colorbar(sup, ax = eje, shrink = 0.5)
-# eje.set_title(r"Potencial bidimensional")
-# eje.set_xlabel(r"$x$")
-# eje.set_ylabel(r"$y$")
-# eje.set_zlabel(r"$V$")
-# plt.show()
+X, Y = np.meshgrid(x,y)
+# Gráfica de la solución en 2D
+fig, eje = plt.subplots(figsize=(10, 8))
+cf = eje.contourf(X, Y, V_N, levels=20, cmap='viridis')
+cs = eje.contour(X, Y, V_N, levels=20, colors='white', linewidths=0.5)
+eje.clabel(cs, inline=True, fontsize=8)
+plt.colorbar(cf)
+plt.title(r"Potencial bidimensional")
+plt.xlabel(r"$x$")
+plt.ylabel(r"$y$")
+plt.show()
 
-# # Gráfica de la solución en 2D
-# fig, eje = plt.subplots(figsize=(10, 8))
-# cf = eje.contourf(X, Y, V_N, levels=20, cmap='viridis')
-# cs = eje.contour(X, Y, V_N, levels=20, colors='white', linewidths=0.5)
-# eje.clabel(cs, inline=True, fontsize=8)
-# plt.colorbar(cf)
-# plt.title(r"Potencial bidimensional")
-# plt.xlabel(r"$x$")
-# plt.ylabel(r"$y$")
-# plt.show()
+# Gráfica de la solución en 3D
+fig = plt.figure()
+eje = plt.axes(projection='3d')
+sup = eje.plot_surface(X, Y, V_N, cmap='viridis')
+fig.colorbar(sup, ax = eje, shrink = 0.5)
+eje.set_title(r"Potencial bidimensional")
+eje.set_xlabel(r"$x$")
+eje.set_ylabel(r"$y$")
+plt.show()
+

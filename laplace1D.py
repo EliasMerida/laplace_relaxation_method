@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from copy import deepcopy
 
 # configuración del texto de las gráficas
+# comente si no tiene una distribución de latex instalada
 from matplotlib import rc
 rc('text', usetex=True)
 rc('font', size=12)
@@ -82,7 +83,7 @@ xtickstags = ["%.2f"%(xi) for xi in xticks[:n_ticks-1]]
 xtickstags.append("L")
 plt.xticks(xticks, xtickstags)
 plt.grid(ls="dashed")
-plt.savefig("1dlaplace.png")
+# plt.savefig("1dlaplace.png")
 plt.show()
 
 # Animación para ver evolución de la solución
