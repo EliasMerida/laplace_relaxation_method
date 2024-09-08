@@ -74,13 +74,15 @@ print(f"La diferencia entre soluciones consecutivas es del orden de O(10^{int(np
 plt.plot(x, V_N)
 plt.title(r"Potencial unidimensional")
 plt.xlabel(r"$x$")
-plt.ylabel(r"$y$")
+plt.ylabel(r"$V$")
+plt.ylim(4.9995,5.0001)
 n_ticks = 5
 xticks = np.linspace(0,L,n_ticks)
 xtickstags = ["%.2f"%(xi) for xi in xticks[:n_ticks-1]]
 xtickstags.append("L")
 plt.xticks(xticks, xtickstags)
 plt.grid(ls="dashed")
+plt.savefig("1dlaplace.png")
 plt.show()
 
 # Animación para ver evolución de la solución
