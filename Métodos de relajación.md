@@ -63,8 +63,8 @@ en el cual se reemplazan los valores $V^{\text{VIEJO}}$ con los $V^{\text{NUEVO}
 ## Algunos resultados
 Se resuelven las ecuaciones para el caso más sencillo
 
-![sol_evol][def]
-
 [def]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/1Dsol_evol.gif
+
+![sol_evol][def] { width: 200px; }
 
 <img src="[def]" alt="drawing" width="200"/>
