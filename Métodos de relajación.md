@@ -61,7 +61,7 @@ Este esquema se conoce como método de Jacobi. Evidentemente se necesitará de d
 en el cual se reemplazan los valores $V^{\text{VIEJO}}$ con los $V^{\text{NUEVO}}$, apenas estos son calculados.
 
 ## Algunos resultados
-Se resuelven las ecuaciones para el caso más sencillo, con valores de pontencial constante en cada frontera.
+Se resuelven las ecuaciones para el caso más sencillo, con valores de potencial constante en cada frontera.
 
 ### Caso unidimensional
 
@@ -71,10 +71,32 @@ Como hemos visto, en el caso unidimensional, la solución es de la forma $ V(x) 
 
 
 
-![sol_evol][img2]
+![sol_evol][img1]
 
-Para 19905 iteraciones realizadas la diferencia entre soluciones consecutivas es del orden de $O(10^{-6})$.
+Para 19905 iteraciones realizadas la diferencia entre soluciones consecutivas es de $O(10^{-6})$.
 
 [img2]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/1dlaplace.png
 
 ![laplace1d][img2]
+
+Como hemos discutido previamente, se puede interpretar que la ecuación de Laplace nos indica que la solución en un punto es un *promedio* de la solución a derecha e izquierda. Además que no pueden tener máximos ni mínimos locales, los únicos valores extremos están en los bordes.
+
+### Caso bidimensional
+En el caso bidimensional se estudia un dominio cuadrado, con $L=1$, con condiciones de borde constantes:
+
+i. $V(0,y) = 5$
+
+ii. $V(L,y) = 5$
+
+iii. $V(x,0) = 5$
+
+iv. $V(x,L) = 5$
+
+[img3]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace2D.png
+
+![laplace2d][img4]
+
+La diferencia entre soluciones consecutivas, para 5000 iteraciones, es de $O(10^{-1})$.
+
+[img4]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace2D_contour.png
+![laplace2d_countour][img4]
