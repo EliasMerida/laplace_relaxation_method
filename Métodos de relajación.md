@@ -100,3 +100,9 @@ La diferencia entre soluciones consecutivas, para 5000 iteraciones, es de $O(10^
 
 [img4]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace2D_contour.png
 ![laplace2d_countour][img4]
+
+
+
+## Bibliografía
+1. John David Jackson, *Classical Electrodynamics*, 3rd edition. Wiley New York 1999.
+2. David Jeffrey Griffiths, *Introduction to Electrodynamics*, 3rd edition. Prentice Hall 1999.

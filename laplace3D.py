@@ -25,6 +25,7 @@ rc('text.latex', preamble=r'\usepackage[OT1]{fontenc}')
 # Dominio
 Lx = 1.
 Ly = 1.
+Lz = 1.
 # Discretización
 # número de nodos N y separación entre puntos h
 h = 1E-2
