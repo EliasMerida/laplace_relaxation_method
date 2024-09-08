@@ -54,12 +54,11 @@ V_V[:,N-1] = 5.
 # número máximo de iteraciones
 n_iter = 5000
 # tolerancia para s = |V^NUEVO - V^VIEJO| < ϵ
-e = 1E-3
+e = 1E-0
 # valores iniciales
-n = 1
-s = -1
+n = 0
 # Ciclo para calcular la solución
-while (s < e or n <= n_iter):
+while True:
     # Recorremos cada nodo interior del dominio
     for i in range(1,N-1):
         for j in range(1,N-1):
@@ -67,38 +66,46 @@ while (s < e or n <= n_iter):
             V_N[i,j] = (1./4.) * (V_V[i-1,j] + V_V[i+1,j] + V_V[i,j-1] + V_V[i,j+1])
     # obtenemos la diferencia entre el valor nuevo y viejo del potencial
     s = np.linalg.norm(V_N - V_V)
-    # actualizamos el potencial para la próxima iteración
-    V_V = deepcopy(V_N)
+    # si esta es menor a la tolerancia considerada
+    if s < e:
+        # detenemos las iteraciones
+        break
+    else:
+        # actualizamos el potencial para la próxima iteración
+        V_V = deepcopy(V_N)
     # contamos el número de iteración
     n = n + 1
+    # control alternativo, número de iteraciones
+    if n > n_iter:
+        break
 
 # mensaje informativo
 print(f"{n} iteraciones realizadas ")
-print(f"La diferencia entre soluciones consecutivas es de O(10^{int(np.log10(s))})")
+print(f"La diferencia entre soluciones consecutivas es del orden de O(10^{int(np.log10(s))})")
 
-# Gráfica de la solución en 3D
-X, Y = np.meshgrid(x,y)
-# creo figura
-fig = plt.figure()
-# creo ejes para graficar en 3D
-eje = plt.axes(projection='3d')
-# en los ejes grafico la superficie
-sup = eje.plot_surface(X, Y, V_N, cmap='viridis')
-# a la figura le sumo una barra, indicando en que ejes (ax) en que reduzca el tamaño de la barra (shrink)
-fig.colorbar(sup, ax = eje, shrink = 0.5)
-eje.set_title(r"Potencial bidimensional")
-eje.set_xlabel(r"$x$")
-eje.set_ylabel(r"$y$")
-eje.set_zlabel(r"$V$")
-plt.show()
+# # Gráfica de la solución en 3D
+# X, Y = np.meshgrid(x,y)
+# # creo figura
+# fig = plt.figure()
+# # creo ejes para graficar en 3D
+# eje = plt.axes(projection='3d')
+# # en los ejes grafico la superficie
+# sup = eje.plot_surface(X, Y, V_N, cmap='viridis')
+# # a la figura le sumo una barra, indicando en que ejes (ax) en que reduzca el tamaño de la barra (shrink)
+# fig.colorbar(sup, ax = eje, shrink = 0.5)
+# eje.set_title(r"Potencial bidimensional")
+# eje.set_xlabel(r"$x$")
+# eje.set_ylabel(r"$y$")
+# eje.set_zlabel(r"$V$")
+# plt.show()
 
-# Gráfica de la solución en 2D
-fig, eje = plt.subplots(figsize=(10, 8))
-cf = eje.contourf(X, Y, V_N, levels=20, cmap='viridis')
-cs = eje.contour(X, Y, V_N, levels=20, colors='white', linewidths=0.5)
-eje.clabel(cs, inline=True, fontsize=8)
-plt.colorbar(cf)
-plt.title(r"Potencial bidimensional")
-plt.xlabel(r"$x$")
-plt.ylabel(r"$y$")
-plt.show()
+# # Gráfica de la solución en 2D
+# fig, eje = plt.subplots(figsize=(10, 8))
+# cf = eje.contourf(X, Y, V_N, levels=20, cmap='viridis')
+# cs = eje.contour(X, Y, V_N, levels=20, colors='white', linewidths=0.5)
+# eje.clabel(cs, inline=True, fontsize=8)
+# plt.colorbar(cf)
+# plt.title(r"Potencial bidimensional")
+# plt.xlabel(r"$x$")
+# plt.ylabel(r"$y$")
+# plt.show()
