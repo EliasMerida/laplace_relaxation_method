@@ -59,3 +59,10 @@ Seguiremos el siguiente método para encontrar una solución númerica:
 
 Este esquema se conoce como método de Jacobi. Evidentemente se necesitará de dos *arreglos* para el cálculo del potencial. Una solución más eficiente es el método de Gauss-Seidel,
 en el cual se reemplazan los valores $V^{\text{VIEJO}}$ con los $V^{\text{NUEVO}}$, apenas estos son calculados.
+
+## Algunos resultados
+Se resuelven las ecuaciones para el caso más sencillo
+
+![sol_evol][def]
+
+[def]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/1Dsol_evol.gif
