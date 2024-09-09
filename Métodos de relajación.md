@@ -107,13 +107,16 @@ De manera análoga se considero una configuración en donde los bordes se encuen
 [img6]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace3D_y_cte.png
 [img7]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace3D_z_cte.png
 
-Ya que es difícil visualizar el campo escalar tridimensional $V(x,y,z)$, se gráfico el potencial para 3 planos, justo en el centro de dicha dirección, es decir, se graficó $V(x,y,z)$ para $x = \frac{L}{2}", $y = \frac{L}{2}" y $z = \frac{L}{2}" 
+Ya que es difícil visualizar el campo escalar tridimensional $V(x,y,z)$, se gráfico el potencial para 3 planos, justo en el centro de dicha dirección, es decir, se graficó $V(x,y,z)$ para $x = \frac{L}{2}$, $y = \frac{L}{2}$ y $z = \frac{L}{2}$ 
 
 ![3Dx][img5]
 ![3Dy][img6]
 ![3Dz][img7]
 
-
+## Trabajos propuestos
+Se proponen los siguientes problemas:
+1. Para el caso bidimensional, muestre el efecto de colocar una red de conductores conectados a tierra justo en la mitad del plano ($x=L/2$). Considere que los bordes a la derecha se encuentran a potencial cero. Esta configuración simula una **jaula de Faraday**
+2. Una caja cúbica (de arista $a$) consiste de cinco placas metálicas, unidas y conectadas a tierra. La placa superior está aislada de las otras, mantenida a un potencial $V_0$ constante. Encuentra el potencial dentro de la caja. (Problema 5 del TP Nº4)
 ## Bibliografía
 1. John David Jackson, *Classical Electrodynamics*, 3rd edition. Wiley New York 1999.
 2. David Jeffrey Griffiths, *Introduction to Electrodynamics*, 3rd edition. Prentice Hall 1999.
