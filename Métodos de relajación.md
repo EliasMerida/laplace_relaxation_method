@@ -107,7 +107,7 @@ De manera análoga se considero una configuración en donde los bordes se encuen
 [img6]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace3D_y_cte.png
 [img7]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace3D_z_cte.png
 
-Ya que es difícil visualizar el campo escalar tridimensional $V(x,y,z)$, se gráfico el potencial para 3 planos, justo en el centro de dicha dirección, es decir, se graficó $V(x,y,z)$ para $x = \frac{L}{2}$, $y = \frac{L}{2}$ y $z = \frac{L}{2}$ 
+Ya que es difícil visualizar el campo escalar tridimensional $V(x,y,z)$, se graficó el potencial para 3 planos, justo en el centro de dicha dirección, es decir, se graficó $V(x,y,z)$ para $x = \frac{L}{2}$, $y = \frac{L}{2}$ y $z = \frac{L}{2}$ 
 
 ![3Dx][img5]
 ![3Dy][img6]
