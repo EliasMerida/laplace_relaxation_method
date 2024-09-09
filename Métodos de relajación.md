@@ -31,8 +31,7 @@ o despejando $V_i$ (**Ec. 1**)
 
 $$ V_i = \frac{1}{2}(V_{i+1} + V_{i-1}) $$
 
-Esta última ecuación nos indica que el valor de la solución en un nodo dependerá de la solución en los nodos vecinos. Se tratá de una propiedad de la solución de la 
-ecuación de Laplace (o de Poisson): la solución en un punto es un *promedio* de la solución en los puntos vecinos.
+Esta última ecuación nos indica que el valor de la solución en un nodo dependerá de la solución en los nodos vecinos.
 
 ## Dos y tres dimensiones
 
@@ -69,8 +68,6 @@ Como hemos visto, en el caso unidimensional, la solución es de la forma $ V(x) 
 
 [img1]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/1Dsol_evol.gif
 
-
-
 ![sol_evol][img1]
 
 Para 19905 iteraciones realizadas la diferencia entre soluciones consecutivas es de $O(10^{-6})$.
@@ -101,6 +98,20 @@ La diferencia entre soluciones consecutivas, para 5000 iteraciones, es de $O(10^
 [img4]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace2D_contour.png
 ![laplace2d_countour][img4]
 
+Tanto en el caso unidimensional como en el bidimensional se consideraron 100 nodos.
+
+### Caso tridimensional
+De manera análoga se considero una configuración en donde los bordes se encuentran un valor constante. A diferencia de los casos anterior, se trabajo como solo 10 nodos en cada dimensión, para aliviar el costo computacional de trabajar con arreglos con muchos elementos.
+
+[img5]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace3D_x_cte.png
+[img6]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace3D_y_cte.png
+[img7]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/laplace3D_z_cte.png
+
+Ya que es difícil visualizar el campo escalar tridimensional $V(x,y,z)$, se gráfico el potencial para 3 planos, justo en el centro de dicha dirección, es decir, se graficó $V(x,y,z)$ para $x = \frac{L}{2}", $y = \frac{L}{2}" y $z = \frac{L}{2}" 
+
+![3Dx][img5]
+![3Dy][img6]
+![3Dz][img7]
 
 
 ## Bibliografía
