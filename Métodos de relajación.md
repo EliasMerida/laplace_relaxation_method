@@ -115,8 +115,10 @@ Ya que es difícil visualizar el campo escalar tridimensional $V(x,y,z)$, se gr�
 
 ## Trabajos propuestos
 Se proponen los siguientes problemas:
-1. Para el caso bidimensional, muestre el efecto de colocar una red de conductores conectados a tierra justo en la mitad del plano ($x=L/2$ (ver figura)). Esta configuración simula una **jaula de Faraday**
+1. Para el caso bidimensional, muestre el efecto de colocar una red de conductores conectados a tierra justo en la mitad del plano ($x=L/2$ (ver figura)). Esta configuración simula una **jaula de Faraday**.
+
 [img8]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/Faraday_cage.png
+
 ![faraday][img8]
 
 2. Una caja cúbica (de arista $a$) consiste de cinco placas metálicas, unidas y conectadas a tierra. La placa superior está aislada de las otras, mantenida a un potencial $V_0$ constante. Encuentra el potencial dentro de la caja. (Problema 5 del TP Nº4)
