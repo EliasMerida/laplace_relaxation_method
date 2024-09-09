@@ -48,7 +48,7 @@ V_V[N-1,:] = 5.
 # y = 0, ∀x 
 V_N[:,0] = 5.
 V_V[:,0] = 5.
-# x = 0, ∀y 
+# y = Ly, ∀x
 V_N[:,N-1] = 5.
 V_V[:,N-1] = 5.
 # Condiciones de convergencia
