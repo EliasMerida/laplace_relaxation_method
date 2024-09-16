@@ -64,7 +64,7 @@ Se resuelven las ecuaciones para el caso más sencillo, con valores de potencial
 
 ### Caso unidimensional
 
-Como hemos visto, en el caso unidimensional, la solución es de la forma $ V(x) = a x + b$, donde el valor de las constantes $a$ y $b$ depende de las condiciones de borde. En nuestro caso se considero un dominio de longitud $L = 1$, con condiciones de borde: $V(0) = V(L) = 5$, con lo cual la solución será $V(x) = 5$. Está solución nos permite analizar el método de relajación: podemos ver que ha medida que realizamos las iteraciones, los valores de los bordes *se propagan* al interior del dominio. 
+Como hemos visto, en el caso unidimensional, la solución es de la forma $V(x) = a x + b$, donde el valor de las constantes $a$ y $b$ depende de las condiciones de borde. En nuestro caso se considero un dominio de longitud $L = 1$, con condiciones de borde: $V(0) = V(L) = 5$, con lo cual la solución será $V(x) = 5$. Está solución nos permite analizar el método de relajación: podemos ver que ha medida que realizamos las iteraciones, los valores de los bordes *se propagan* al interior del dominio. 
 
 [img1]: https://github.com/EliasMerida/laplace_relaxation_method/blob/main/1Dsol_evol.gif
 
