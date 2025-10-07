@@ -1,4 +1,4 @@
-# Electromagnetismo 2024 - Fac. de Ciencias Exactas - UNSa
+# Electromagnetismo 2025 - Fac. de Ciencias Exactas - UNSa
 "Métodos de relajación.md" contiene un resumen del trabajo propuesto.
 
 Se adjuntan los siguientes scripts de Python:
@@ -10,5 +10,3 @@ Se adjuntan los siguientes scripts de Python:
 "laplace3D.py" resuelve la ecuación de Laplace en el caso tridimensional, gráfica la solución para algún de las variables constantes ($x$, $y$ o $z$ igual a $L/2$).
 
 Además se comparten las gráficas hechas.
-
-Elias Mérida

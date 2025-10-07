@@ -78,6 +78,8 @@ Para 19905 iteraciones realizadas la diferencia entre soluciones consecutivas es
 
 Como hemos discutido previamente, se puede interpretar que la ecuación de Laplace nos indica que la solución en un punto es un *promedio* de la solución a derecha e izquierda. Además que no pueden tener máximos ni mínimos locales, los únicos valores extremos están en los bordes.
 
+* Resuelva la ecuación unidimensional de Laplace para $x \in [0,1] con $V(0)=0$ y $V(1)=1$
+
 ### Caso bidimensional
 En el caso bidimensional se estudia un dominio cuadrado, con $L=1$, con condiciones de borde constantes:
 
@@ -100,6 +102,8 @@ La diferencia entre soluciones consecutivas, para 5000 iteraciones, es de $O(10^
 
 Tanto en el caso unidimensional como en el bidimensional se consideraron 100 nodos.
 
+* Resuelva la ecuación de Laplace en 2 dimensiones, utilizando las condiciones del ejemplo.
+
 ### Caso tridimensional
 De manera análoga se considero una configuración en donde los bordes se encuentran un valor constante. A diferencia de los casos anterior, se trabajo como solo 10 nodos en cada dimensión, para aliviar el costo computacional de trabajar con arreglos con muchos elementos.
 
@@ -121,7 +125,9 @@ Se proponen los siguientes problemas:
 
 ![faraday][img8]
 
-2. Una caja cúbica (de arista $a$) consiste de cinco placas metálicas, unidas y conectadas a tierra. La placa superior está aislada de las otras, mantenida a un potencial $V_0$ constante. Encuentra el potencial dentro de la caja. (Problema 5 del TP Nº4)
+2. Un caño rectagular, que se extiende paralelo al eje $z$ (de $-\infty$ a $\infty$), tiene tres placas metálicas conectadas a tierra, en $x=0$, $y=0$ e $y=a$. El cuarto lado, en $x=b$, se mantiene a un dado potencial $V_0$ constante. Encuentre el potencial dentro del caño. Compare con el resultado analítico obtenido en el Problema 4 del TP Nº4. Realice un informe corto con los resultados obtenidos.
+
+3. Una caja cúbica (de arista $a$) consiste de cinco placas metálicas, unidas y conectadas a tierra. La placa superior está aislada de las otras, mantenida a un potencial $V_0$ constante. Encuentra el potencial dentro de la caja. (Problema 5 del TP Nº4)
 ## Bibliografía
 1. John David Jackson, *Classical Electrodynamics*, 3rd edition. Wiley New York 1999.
 2. David Jeffrey Griffiths, *Introduction to Electrodynamics*, 3rd edition. Prentice Hall 1999.
