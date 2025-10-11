@@ -7,6 +7,6 @@ Se adjuntan los siguientes scripts de Python:
 
 "laplace2D.py" resuelve la ecuación de Laplace en el caso bidimensional, gráfica la solución en 2D (curvas equipotenciales) y 3D.
 
-"laplace3D.py" resuelve la ecuación de Laplace en el caso tridimensional, gráfica la solución para algún de las variables constantes ($x$, $y$ o $z$ igual a $L/2$).
+"laplace3D.py" resuelve la ecuación de Laplace en el caso tridimensional, gráfica la solución para algúna de las variables constantes ($x$, $y$ o $z$ igual a $L/2$).
 
 Además se comparten las gráficas hechas.
