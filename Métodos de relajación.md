@@ -129,7 +129,7 @@ Se proponen los siguientes problemas:
 
 3. Una caja cúbica (de arista $a$) consiste de cinco placas metálicas, unidas y conectadas a tierra. La placa superior está aislada de las otras, mantenida a un potencial $V_0$ constante. Encuentra el potencial dentro de la caja. (Problema 5 del TP Nº4)
 
-# Para entregar
+### Para entregar
 Lea la sección 1.13 de Classical Electrodynamics de J. D. Jackson, e implemente el método de relajación en 2D considerando para un dado nodo los 8 nodos vecinos próximos. Compare la solución con lo obtenido para el Problema 2, con solo 4 nodos. Redacte un informe con el trabajo realizado.
 ## Bibliografía
 1. John David Jackson, *Classical Electrodynamics*, 3rd edition. Wiley New York 1999.
