@@ -117,7 +117,7 @@ Ya que es difícil visualizar el campo escalar tridimensional $V(x,y,z)$, se gra
 ![3Dy][img6]
 ![3Dz][img7]
 
-## Trabajos propuestos
+## Problemas propuestos
 Se proponen los siguientes problemas:
 1. Para el caso bidimensional, muestre el efecto de colocar una red de conductores conectados a tierra justo en la mitad del plano ($x=L/2$ (ver figura)). Esta configuración simula una **jaula de Faraday**.
 
@@ -128,6 +128,9 @@ Se proponen los siguientes problemas:
 2. Un caño rectagular, que se extiende paralelo al eje $z$ (de $-\infty$ a $\infty$), tiene tres placas metálicas conectadas a tierra, en $x=0$, $y=0$ e $y=a$. El cuarto lado, en $x=b$, se mantiene a un dado potencial $V_0$ constante. Encuentre el potencial dentro del caño. Compare con el resultado analítico obtenido en el Problema 4 del TP Nº4. Realice un informe corto con los resultados obtenidos.
 
 3. Una caja cúbica (de arista $a$) consiste de cinco placas metálicas, unidas y conectadas a tierra. La placa superior está aislada de las otras, mantenida a un potencial $V_0$ constante. Encuentra el potencial dentro de la caja. (Problema 5 del TP Nº4)
+
+# Para entregar
+Lea la sección 1.13 de Classical Electrodynamics de J. D. Jackson, e implemente el método de relajación en 2D considerando para un dado nodo los 8 nodos vecinos próximos. Compare la solución con lo obtenido para el Problema 2, con solo 4 nodos. Redacte un informe con el trabajo realizado.
 ## Bibliografía
 1. John David Jackson, *Classical Electrodynamics*, 3rd edition. Wiley New York 1999.
 2. David Jeffrey Griffiths, *Introduction to Electrodynamics*, 3rd edition. Prentice Hall 1999.

@@ -1,4 +1,4 @@
-# Electromagnetismo 2025 - Fac. de Ciencias Exactas - UNSa
+# Electromagnetismo 2026 - Fac. de Ciencias Exactas - UNSa
 "Métodos de relajación.md" contiene un resumen del trabajo propuesto.
 
 Se adjuntan los siguientes scripts de Python:
