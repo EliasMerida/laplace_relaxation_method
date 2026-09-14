@@ -131,6 +131,7 @@ Se proponen los siguientes problemas:
 
 ### Para entregar
 Lea la sección 1.13 de Classical Electrodynamics de J. D. Jackson, e implemente el método de relajación en 2D considerando para un dado nodo los 8 nodos vecinos próximos. Compare la solución con lo obtenido para el Problema 2, con solo 4 nodos. Redacte un informe con el trabajo realizado.
+
 ## Bibliografía
 1. John David Jackson, *Classical Electrodynamics*, 3rd edition. Wiley New York 1999.
 2. David Jeffrey Griffiths, *Introduction to Electrodynamics*, 3rd edition. Prentice Hall 1999.
