@@ -125,7 +125,7 @@ Se proponen los siguientes problemas:
 
 ![faraday][img8]
 
-2. Un caño rectagular, que se extiende paralelo al eje $z$ (de $-\infty$ a $\infty$), tiene tres placas metálicas conectadas a tierra, en $x=0$, $y=0$ e $y=a$. El cuarto lado, en $x=b$, se mantiene a un dado potencial $V_0$ constante. Encuentre el potencial dentro del caño. Compare con el resultado analítico obtenido en el Problema 4 del TP Nº4. Realice un informe corto con los resultados obtenidos.
+2. Un caño rectagular, que se extiende paralelo al eje $z$ (de $-\infty$ a $\infty$), tiene tres placas metálicas conectadas a tierra, en $x=0$, $y=0$ e $y=a$. El cuarto lado, en $x=b$, se mantiene a un dado potencial $V_0$ constante. Encuentre el potencial dentro del caño. Compare con el resultado analítico obtenido en el Problema 4 del TP Nº4.
 
 3. Una caja cúbica (de arista $a$) consiste de cinco placas metálicas, unidas y conectadas a tierra. La placa superior está aislada de las otras, mantenida a un potencial $V_0$ constante. Encuentra el potencial dentro de la caja. (Problema 5 del TP Nº4)
 
